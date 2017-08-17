@@ -63,11 +63,11 @@ local function bnot(x)
 end
 
 -- create functions for and, xor and or, all for 2 32bit numbers
-local w32_and = bit32.band
-local w32_xor = bit32.bxor
-local w32_or = bit32.bor
-local w32_xor_n = bit32.bxor
-local w32_or3 = bit32.bor
+local w32_and = (bit32 or bit).band
+local w32_xor = (bit32 or bit).bxor
+local w32_or = (bit32 or bit).bor
+local w32_xor_n = (bit32 or bit).bxor
+local w32_or3 = (bit32 or bit).bor
 
 -- binary complement for 32bit numbers
 local function w32_not(a)
